@@ -1,0 +1,1 @@
+example_var_for_tests=42

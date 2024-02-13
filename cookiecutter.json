@@ -1,0 +1,10 @@
+{
+    "package_name": "",
+    "package_folder_name": "{{ cookiecutter.package_name|lower|replace('-', '_') }}",
+    "project_description": "Your project description here",
+    "author_name": "Michaël de Vries",
+    "author_email": "vriesdemichael+github@gmail.com",
+    "license": ["Apache Software License 2.0", "MIT", "GNU GPL v3.0"]
+
+
+}

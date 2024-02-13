@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "{{ cookiecutter.package_name }}"
+version = "0.1.0"
+description = "A openai compatible api for multiple llm backend using modern python"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+license = "{{ cookiecutter.license }}"
+readme = "README.md"
+packages = [{ include = "*", from = "src" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.1"
+pytest = "^8.0.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.1"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# TODO tweak this
+line-length = 120
+target-version = "py311"
+lint.select = [
+    "ALL", # include all the rules, including new ones
+]
+lint.ignore = [
+    #### modules
+    "ANN", # flake8-annotations
+    "COM", # flake8-commas
+    "TID", # flake8-tidy-imports
+    "D",   # pydocstyle
+
+    #### specific rules
+    # "D100",
+]
